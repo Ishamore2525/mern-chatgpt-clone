@@ -6,6 +6,9 @@ const connectToDB = require("./src/config/db");
 connectToDB();
 
 
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
 
 
 app.listen(3000, () => {
