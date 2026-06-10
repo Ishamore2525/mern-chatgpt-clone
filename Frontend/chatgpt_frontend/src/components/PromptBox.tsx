@@ -27,7 +27,7 @@ export function PromptBox(props: ChatAreaProps){
                 console.log(props.selectedChatId);
 
                 await axios.post(
-                    `http://localhost:3000/api/sendmessage/${props.selectedChatId}/message`,
+                    `${import.meta.env.VITE_API_URL}/api/${props.selectedChatId}/message`,
                     {
                         message: input,
                     },

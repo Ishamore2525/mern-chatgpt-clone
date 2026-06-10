@@ -26,7 +26,7 @@ export function Chat(){
             const token = localStorage.getItem("token");
 
 
-            const response = await axios.get(`http://localhost:3000/api/sendmessage/${chatId}`,
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/sendmessage/${chatId}`,
             {
                 headers:{
                     Authorization: `Bearer ${token}`,

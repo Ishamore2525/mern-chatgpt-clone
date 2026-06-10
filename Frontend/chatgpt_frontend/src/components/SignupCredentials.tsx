@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const api = axios.create({
-        baseURL: "http://localhost:3000/api/auth",
+        baseURL: `${import.meta.env.VITE_API_URL}/api/auth`,
         headers:{
             "Content-Type": "application/json",
         },

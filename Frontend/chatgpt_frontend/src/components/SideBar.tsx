@@ -29,7 +29,7 @@ export function SideBar(props: SideBarProps){
             
 
             const response = await axios.get(
-                "http://localhost:3000/api/sendmessage",
+                `${import.meta.env.VITE_API_URL}/api/sendmessage`,
                 {
                     headers: {
                     Authorization: `Bearer ${token}`,
@@ -62,7 +62,7 @@ export function SideBar(props: SideBarProps){
                 
                 console.log(token);
 
-                const response = await axios.post("http://localhost:3000/api/sendmessage/emptychat",
+                const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/sendmessage/emptychat`,
                 {},
                 {
                     headers:  {
@@ -86,7 +86,7 @@ export function SideBar(props: SideBarProps){
 
                 const token = localStorage.getItem("token");
 
-                await axios.delete(`http://localhost:3000/api/sendmessage/${chatId}`,
+                await axios.delete(`${import.meta.env.VITE_API_URL}/api/sendmessage/${chatId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
