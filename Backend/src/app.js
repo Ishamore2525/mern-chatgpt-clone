@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: true,
+    origin:  "https://my-chat-app.vercel.app",
     credentials: true,
 }));
 //authenticate user
