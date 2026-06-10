@@ -1,6 +1,6 @@
 import {Signup} from "./screens/Signup";
 import {Login} from "./screens/Login";
-import {, Routes, Route} from "react-router";
+import { Routes, Route} from "react-router";
 import {Chat} from "./screens/Chat";
 
 function App() {
