@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import {Send} from "lucide-react";
 import axios from "axios";
 

@@ -1,6 +1,5 @@
 
-import {useState, useEffect} from "react";
-import {Chat} from "../screens/Chat";
+
 
 interface ChatAreaProps {
   selectedChatId: string,
@@ -9,12 +8,17 @@ interface ChatAreaProps {
 
 }
 
-export function ChatArea(props: ChatAreaProps){
+interface Message {
+  role: string;
+  content: string;
+}
+
+export function ChatArea(props:  ChatAreaProps){
 
     return <div style={{minHeight:"75vh"}}>
 
         <div className= "scroll-container" style= {{maxHeight: "75vh",overflowY: "scroll", margin:20}}>
-                    {props.messages.map((message, index) => (
+                    {props.messages.map((message: Message, index: number) => (
                         <div key={index}
                             style={{
                                 margin: "10px",

@@ -2,7 +2,7 @@ import {Columns2, NotebookPen, Trash2} from "lucide-react";
 import {Button} from "./Button";
 import axios from "axios";
 import {useState, useEffect} from "react";
-import { Navigate, useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 interface SideBarProps {
   selectedChatId: string,
