@@ -1,4 +1,4 @@
-const react = require("react");
+
 const userModel = require("../models/user.model");
 const jwt = require("jsonwebtoken");
 
@@ -66,7 +66,7 @@ async function userLoginController(req, res){
     const isValidPassword = await user.comparePassword(password)
 
     if(! isValidPassword){
-        return react.status(401).json({
+        return res.status(401).json({
             message: "Password is incorrect"
         })
     }
